@@ -88,7 +88,7 @@ for i in range(len(data_list)):
     columnH = sweeps_list[i]
     sheet.append([columnA,columnB,columnC,columnD,columnE,columnF,columnG,columnH])
 
-excel_file.save('nonzero_data(test).xlsx')
+#excel_file.save('nonzero_data(test).xlsx')
 
 #Statistics
 count1_list=[]
@@ -124,3 +124,18 @@ count2 = len(count2_list) - count3 - count4 - count5 - count6 - count_else
 count1 = len(count1_list) - count2 - count3 - count4 - count5 - count6 - count_else
 
 print("count1:",count1,"\n","count2:",count2,"\n","count3:",count3,"\n","count4:",count4,"\n","count5:",count5,"\n","count6:",count6,"\n","count_else:",count_else)
+
+#plot bar graph
+import numpy as np
+import matplotlib.pyplot as plt
+
+counts = np.array([1, 2, 3, 4, 5, 6])
+accumulated_events = np.array([count1, count2, count3, count4, count5, count6])
+plt.bar(counts, accumulated_events)
+
+plt.title('Statistics')
+plt.xlabel('counts')
+plt.ylabel('accumulated_events')
+for x, y in zip(counts, accumulated_events):
+    plt.text(x, y, '%.0f' % y, ha='center', va= 'bottom',fontsize=11)
+plt.show()
