@@ -1,8 +1,8 @@
 data_list=[]
 
-with open("single_photon.txt", mode="r") as file:
+with open("single_photon_2.txt", mode="r") as file:
     for line in file:
-        if str(line[4:11]) == str("0000000"):
+        if int(line, 16) == 000000000000:
             0
         else:
             data_list.append(line)
@@ -80,32 +80,32 @@ for i in range(len(sweeps_list)):
             print(i,"is different!")
             different.append("d")
         else:
-            print("Same!")
+            0#print("Same!")
     elif sweeps_list[i] == sweeps_list[i-1] and sweeps_list[i] == sweeps_list[i-2] and sweeps_list[i] != sweeps_list[i-3]:
         count3_list.append(3)
         if channel_list[i] == channel_list[i-1] and channel_list[i] == channel_list[i-2]:
-            print("Same!")
+            0#print("Same!")
         else:
             print(i,"is different!")
             different.append("d")
     elif sweeps_list[i] == sweeps_list[i-1] and sweeps_list[i] == sweeps_list[i-2] and sweeps_list[i] == sweeps_list[i-3] and sweeps_list[i] != sweeps_list[i-4]:
         count4_list.append(4)
         if channel_list[i] == channel_list[i-1] and channel_list[i] == channel_list[i-2] and channel_list[i] == channel_list[i-3]:
-            print("Same!")
+            0#print("Same!")
         else:
             print(i,"is different!")
             different.append("d")
     elif sweeps_list[i] == sweeps_list[i-1] and sweeps_list[i] == sweeps_list[i-2] and sweeps_list[i] == sweeps_list[i-3] and sweeps_list[i] == sweeps_list[i-4] and sweeps_list[i] != sweeps_list[i-5]:
         count5_list.append(5)
         if channel_list[i] == channel_list[i-1] and channel_list[i] == channel_list[i-2] and channel_list[i] == channel_list[i-3] and channel_list[i] == channel_list[i-4]:
-            print("Same!")
+            0#print("Same!")
         else:
             print(i,"is different!")
             different.append("d")
     elif sweeps_list[i] == sweeps_list[i-1] and sweeps_list[i] == sweeps_list[i-2] and sweeps_list[i] == sweeps_list[i-3] and sweeps_list[i] == sweeps_list[i-4] and sweeps_list[i] == sweeps_list[i-5] and sweeps_list[i] != sweeps_list[i-6]:
         count6_list.append(6)
         if channel_list[i] == channel_list[i-1] and channel_list[i] == channel_list[i-2] and channel_list[i] == channel_list[i-3] and channel_list[i] == channel_list[i-4] and channel_list[i] == channel_list[i-5]:
-            print("Same!")
+            0#print("Same!")
         else:
             print(i,"is different!")
             different.append("d")
