@@ -11,7 +11,7 @@ data_list=[]
 
 with open("single_photon.txt", mode="r") as file:
     for line in file:
-        if str(line[4:11]) == str("0000000"):
+        if str(line[11]) == str("e") or str(line[11]) == str("0"):
             0
         else:
             data_list.append(line)
@@ -143,7 +143,7 @@ counts = np.array([1, 2, 3, 4, 5, 6])
 accumulated_events = np.array([count1, count2, count3, count4, count5, count6])
 plt.bar(counts, accumulated_events)
 
-plt.title('Statistics')
+plt.title('Statistics(single_photon_1_drop_e_channel)')
 plt.xlabel('counts')
 plt.ylabel('accumulated_events')
 for x, y in zip(counts, accumulated_events):
