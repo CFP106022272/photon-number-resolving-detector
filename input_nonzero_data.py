@@ -1,11 +1,21 @@
 data_list=[]
 
-with open("single_photon_3.txt", mode="r") as file:
+###
+#with open("single_photon_3.txt", mode="r") as file:
+#    for line in file:
+#        if int(line, 16) == 000000000000:
+#            0
+#        else:
+#            data_list.append(line)
+###
+
+with open("single_photon.txt", mode="r") as file:
     for line in file:
-        if int(line, 16) == 000000000000:
+        if str(line[4:11]) == str("0000000"):
             0
         else:
             data_list.append(line)
+
 #print(data_list)
 #with open("nonzero_data_2.txt", mode="w") as file:
     #file.write(str(data_list))
@@ -88,7 +98,7 @@ for i in range(len(data_list)):
     columnH = sweeps_list[i]
     sheet.append([columnA,columnB,columnC,columnD,columnE,columnF,columnG,columnH])
 
-#excel_file.save('nonzero_data(test).xlsx')
+excel_file.save('nonzero_data(test).xlsx')
 
 #Statistics
 count1_list=[]
