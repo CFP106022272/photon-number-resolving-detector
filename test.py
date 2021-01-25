@@ -1,8 +1,12 @@
-ta_list= [123,456,789]
-data=str(ta_list[0])
-print("1", data[1])
+data_list=[]
 
-str_f="5"+str(ta_list[0])
-print(str_f)
+with open("single_photon.txt", mode="r") as file:
+    for line in file:
+        if str(line[4:11]) == str("0000000"):
+            0
+        else:
+            data_list.append(line)
 
-import discord
+#print(data_list)
+with open("nonzero_data_1.txt", mode="w") as file:
+    file.write(str(data_list))
