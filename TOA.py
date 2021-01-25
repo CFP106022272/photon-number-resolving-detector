@@ -24,7 +24,7 @@ plt.ylabel("Number of Counts")
 plt.plot(time, APD1)
 plt.xlim([0, 1700])
 plt.ylim([0, 27])
-plt.show()
+#plt.show()
 
 plt.title("TOA of Photons at APD2")
 plt.xlabel("Time(ns)")
@@ -32,7 +32,7 @@ plt.ylabel("Number of Counts")
 plt.xlim([0, 1700])
 plt.plot(time, APD2)
 plt.ylim([0, 33])
-plt.show()
+#plt.show()
 
 APD1_first_peak_value = max(APD1[0:5000])
 APD1_first_peak_time = int([i for i, v in enumerate(APD1[0:5000]) if v == APD1_first_peak_value][0]) * 0.1
@@ -183,7 +183,7 @@ plt.ylabel("Number of Counts")
 plt.plot(cut_time_1, cut_APD1)
 plt.xlim([0, 1700])
 plt.ylim([0, 27])
-plt.show()
+#plt.show()
 
 #cut wave packet 2
 var_area_2_1 = APD2_area_1
@@ -250,4 +250,15 @@ plt.ylabel("Number of Counts")
 plt.plot(cut_time_2, cut_APD2)
 plt.xlim([0, 1700])
 plt.ylim([0, 33])
-plt.show()
+#plt.show()
+
+
+#Statistics
+data_list.clear()
+
+with open("single_photon_3.txt", mode="r") as file:
+    for line in file:
+        if int(line, 16) == 000000000000:
+            0
+        else:
+            data_list.append(line)
