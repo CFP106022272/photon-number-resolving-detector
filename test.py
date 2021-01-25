@@ -1,3 +1,5 @@
-list=[0,1,9,9,4,2,9]
-find = 9
-print([i for i,v in enumerate(list) if v==find])
+import numpy as np
+a=np.array([1,2,3])
+b=np.array([11,22,33])
+c=np.array([44,55,66])
+print(np.concatenate((a,b,c)))
