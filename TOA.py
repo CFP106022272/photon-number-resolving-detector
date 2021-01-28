@@ -393,3 +393,5 @@ plt.ylabel('accumulated_events')
 for x, y in zip(counts, accumulated_events):
     plt.text(x, y, '%.0f' % y, ha='center', va= 'bottom',fontsize=11)
 plt.show()
+
+print(">> ending <<")
